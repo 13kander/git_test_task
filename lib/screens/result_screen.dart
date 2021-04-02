@@ -44,10 +44,13 @@ class ResultScreen extends StatelessWidget {
                 ),
               ),
             ),
-            Center(
-              child: Text(
-                'НАЙДЕНО: ${data.totalCount}',
-                style: ProjectTextStyles.greySubtitle,
+            Padding(
+              padding: const EdgeInsets.only(bottom: 8),
+              child: Center(
+                child: Text(
+                  'НАЙДЕНО: ${data.totalCount}',
+                  style: ProjectTextStyles.greySubtitle,
+                ),
               ),
             ),
             ...data.items
