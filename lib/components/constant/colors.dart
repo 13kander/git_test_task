@@ -6,6 +6,6 @@ class ProjectColor {
   static const grey = Color(0xFFA6A6A6);
   static const blue = Color(0xFF58AFFF);
   static const border = Color(0xFFDFDFDF);
-  static const background = Color(0xFFE5E5E5);
+  static const background = Color(0xFFFFFFFF);
   static const white = Color(0xFFFFFFFF);
 }
