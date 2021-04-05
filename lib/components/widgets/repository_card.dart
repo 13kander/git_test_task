@@ -16,7 +16,7 @@ class RepositoryCard extends StatelessWidget {
       child: Container(
         height: 109,
         decoration: BoxDecoration(
-            border: Border.all(width: 1, color: ProjectColor.border),
+            border: Border.all(color: ProjectColor.border),
             borderRadius: BorderRadius.circular(10)),
         child: Stack(
           children: [
@@ -24,7 +24,7 @@ class RepositoryCard extends StatelessWidget {
               children: [
                 Padding(
                   padding: const EdgeInsets.only(top: 12, left: 16, bottom: 4),
-                  child: Container(
+                  child: SizedBox(
                       width: MediaQuery.of(context).size.width,
                       child: Text(
                         repository.name,
@@ -33,7 +33,7 @@ class RepositoryCard extends StatelessWidget {
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16),
-                  child: Container(
+                  child: SizedBox(
                     width: MediaQuery.of(context).size.width,
                     child: Row(
                       children: [
@@ -46,7 +46,7 @@ class RepositoryCard extends StatelessWidget {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsets.only(left: 8),
+                          padding: const EdgeInsets.only(left: 8),
                           child: Text(
                             repository.owner.login,
                             style: ProjectTextStyles.userName,
@@ -56,8 +56,8 @@ class RepositoryCard extends StatelessWidget {
                     ),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 8, bottom: 12),
+                const Padding(
+                  padding: EdgeInsets.only(top: 8, bottom: 12),
                   child: Divider(
                     thickness: 1,
                     height: 0,
@@ -68,11 +68,11 @@ class RepositoryCard extends StatelessWidget {
                 ),
                 Padding(
                   padding: const EdgeInsets.only(right: 16, left: 16),
-                  child: Container(
+                  child: SizedBox(
                     width: MediaQuery.of(context).size.width,
                     child: RichText(
                         text: TextSpan(children: [
-                      TextSpan(
+                      const TextSpan(
                         text: 'Обновлено: ',
                         style: ProjectTextStyles.repositoryGreySubtitle,
                       ),
@@ -100,7 +100,7 @@ class RepositoryCard extends StatelessWidget {
                       child: Row(
                         children: [
                           Padding(
-                              padding: EdgeInsets.only(right: 2),
+                              padding: const EdgeInsets.only(right: 2),
                               child: ProjectIcons.star),
                           Text(
                             repository.stargazersCount.toString(),

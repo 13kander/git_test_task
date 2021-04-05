@@ -29,7 +29,7 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       child: BlocBuilder<GitBloc, GitState>(
         builder: (context, state) {
           if (state is GitInitial) {
@@ -53,7 +53,7 @@ class _HomeState extends State<Home> {
             );
           }
           if (state is GitLoading) {
-            return Center(
+            return const Center(
               child: CircularProgressIndicator(),
             );
           }

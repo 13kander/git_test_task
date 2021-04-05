@@ -3,8 +3,8 @@ import 'dart:async';
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:meta/meta.dart';
-import 'package:test_git_task/models/data.dart';
-import 'package:test_git_task/repositories/git_repository.dart';
+import '../models/data.dart';
+import '../repositories/git_repository.dart';
 
 part 'git_event.dart';
 part 'git_state.dart';
@@ -17,8 +17,9 @@ class GitBloc extends Bloc<GitEvent, GitState> {
   Stream<GitState> mapEventToState(
     GitEvent event,
   ) async* {
-    if (event is SearchRepositiries)
+    if (event is SearchRepositiries) {
       yield* _searchRepositoriesToStae(query: event.query);
+    }
   }
 
   Stream<GitState> _searchRepositoriesToStae({@required String query}) async* {

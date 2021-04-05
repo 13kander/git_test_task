@@ -11,8 +11,8 @@ class SearchScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: PreferredSize(
-            preferredSize: const Size.fromHeight(50.0),
+        appBar: const PreferredSize(
+            preferredSize: Size.fromHeight(50.0),
             child: ProjectAppBar(
               title: 'ПОИСК',
             )),

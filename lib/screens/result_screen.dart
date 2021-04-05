@@ -19,8 +19,8 @@ class ResultScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: PreferredSize(
-          preferredSize: const Size.fromHeight(50.0),
+      appBar: const PreferredSize(
+          preferredSize: Size.fromHeight(50.0),
           child: ProjectAppBar(
             title: 'РЕЗУЛЬТАТ ПОИСКА',
           )),
@@ -30,15 +30,15 @@ class ResultScreen extends StatelessWidget {
         child: Column(
           children: [
             Padding(
-              padding: EdgeInsets.only(top: 19, bottom: 8),
+              padding: const EdgeInsets.only(top: 19, bottom: 8),
               child: Center(
                 child: RichText(
                   text: TextSpan(children: [
-                    TextSpan(
+                    const TextSpan(
                         text: 'ПО ЗАПРОСУ: ',
                         style: ProjectTextStyles.greySubtitle),
                     TextSpan(
-                        text: '\"$query\"'.toUpperCase(),
+                        text: '"$query"'.toUpperCase(),
                         style: ProjectTextStyles.blueSubtitle)
                   ]),
                 ),

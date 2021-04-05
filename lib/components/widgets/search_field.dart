@@ -13,7 +13,7 @@ class SearchField extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(top: 84, left: 16, right: 16),
-      child: Container(
+      child: SizedBox(
         height: 50,
         child: TextFormField(
           controller: textEditingController,
@@ -28,7 +28,7 @@ class SearchField extends StatelessWidget {
                   decoration: BoxDecoration(
                       color: ProjectColor.blue,
                       borderRadius: BorderRadius.circular(50)),
-                  child: Center(
+                  child: const Center(
                     child: Text(
                       'НАЙТИ',
                       style: ProjectTextStyles.buttonTitle,
@@ -39,10 +39,10 @@ class SearchField extends StatelessWidget {
             ),
             border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(50),
-                borderSide: BorderSide(width: 1, color: ProjectColor.border)),
+                borderSide: const BorderSide(color: ProjectColor.border)),
             enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(50),
-                borderSide: BorderSide(width: 1, color: ProjectColor.border)),
+                borderSide: const BorderSide(color: ProjectColor.border)),
           ),
         ),
       ),

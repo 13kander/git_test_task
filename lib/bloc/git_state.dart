@@ -20,7 +20,7 @@ class GitLoading extends GitState {
 class GitFailure extends GitState {
   final String exception;
 
-  GitFailure({@required this.exception});
+  const GitFailure({@required this.exception});
   @override
   List<Object> get props => [exception];
 }
@@ -29,7 +29,7 @@ class GitSuccess extends GitState {
   final Data data;
   final String query;
 
-  GitSuccess({@required this.data, @required this.query});
+  const GitSuccess({@required this.data, @required this.query});
 
   @override
   List<Object> get props => [data, query];

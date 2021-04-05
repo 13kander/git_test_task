@@ -7,12 +7,11 @@ import 'package:test_git_task/services/git_service.dart';
 
 import 'bloc/git_bloc.dart';
 
-void main() async {
+void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  await FlutterStatusbarManager.setHidden(true,
-          animation: StatusBarAnimation.SLIDE)
+  FlutterStatusbarManager.setHidden(true, animation: StatusBarAnimation.SLIDE)
       .whenComplete(() async =>
-          await FlutterStatusbarManager.setStyle(StatusBarStyle.DARK_CONTENT)
+          FlutterStatusbarManager.setStyle(StatusBarStyle.DARK_CONTENT)
               .whenComplete(() => runApp(MyApp())));
 }
 

@@ -9,10 +9,9 @@ class ProjectAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
           color: ProjectColor.background,
-          border:
-              Border(bottom: BorderSide(width: 1, color: ProjectColor.border))),
+          border: Border(bottom: BorderSide(color: ProjectColor.border))),
       child: Center(
           child: Text(
         title,

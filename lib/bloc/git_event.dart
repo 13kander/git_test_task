@@ -10,7 +10,7 @@ abstract class GitEvent extends Equatable {
 class SearchRepositiries extends GitEvent {
   final String query;
 
-  SearchRepositiries({@required this.query});
+  const SearchRepositiries({@required this.query});
   @override
   List<Object> get props => [query];
 }
